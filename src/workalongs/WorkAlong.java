@@ -1,3 +1,5 @@
+package workalongs;
+
 public class WorkAlong {
     public static void main(String[] args) {
         int highScorePosition = calculateHighScorePosition(1500);

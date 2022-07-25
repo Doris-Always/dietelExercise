@@ -22,9 +22,10 @@ public class CashierSide {
     private double bill;
 
     private double amountPaid;
+    private double totalPrice = 0.0;
     Scanner scanner = new Scanner(System.in);
     private static List<CustomerInvoice> listOfItems = new ArrayList<>();
-    private double totalPrice = 0.0;
+
 
 
 
@@ -136,6 +137,9 @@ public class CashierSide {
         }
         return invoice.toString();
     }
+//    for (CustomerInvoice listOfItems : listOfItem){
+//        System.out.printf("%n%s%n",listOfItems.getItem());
+//    }
     //A METHOD THAT COLLECTS ITEM BOUGHT BY CUSTOMER
     private void collectItemDetails() {
         CustomerInvoice invoice = new CustomerInvoice();
@@ -160,9 +164,7 @@ public class CashierSide {
         if (response.toLowerCase().equals("y")) {
             collectItemDetails();
         }
-//        else if (response.toLowerCase().equals("n")) {
-//            this.cashierName = inputHelper("What is the cashier's name?");
-//        }
+
     }
 
 }
